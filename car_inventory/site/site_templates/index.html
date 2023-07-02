@@ -1,7 +1,10 @@
 {% extends 'base.html' %}
 
-
 {% block content %}
+    <div>
+        <h1>Your token:</h1>
+        {{ current_user.token }}
+    </div>
 
 <div class="container">
     <!-- Header Section -->
@@ -127,7 +130,7 @@
                 <p>Save Your Money</p>
             </div>
         </div>
-    </footer>
-</div>
+    </div>
+  </footer>
 
-{% endblock content %}
+{% endblock %}
