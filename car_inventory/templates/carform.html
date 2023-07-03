@@ -1,0 +1,41 @@
+
+
+<form method="POST">
+    {{ form.hidden_tag() }}
+    <div class="form-group">
+        <fieldset class="make-field">
+            {{ form.make.label }}
+            {{ form.make(class='form-control', placeholder='Name') }}
+        </fieldset>
+        <fieldset class="model-field">
+            {{ form.model.label }}
+            {{ form.model(class='form-control', placeholder='model') }}
+        </fieldset>
+        <fieldset class="price-field">
+            {{ form.price.label }}
+            {{ form.price(class='form-control', placeholder='Price') }}
+        </fieldset>
+        <fieldset class="year">
+            {{ form.year.label }}
+            {{ form.year(class='form-control', placeholder='year') }}
+        </fieldset>
+        <fieldset class="is_new">
+            {{ form.is_new.label }}
+            {{ form.is_new(class='form-control', placeholder='is_new') }}
+        </fieldset>
+        <fieldset class="vehicle_type">
+            {{ form.vehicle_type.label }}
+            {{ form.vehicle_type(class='form-control', placeholder='vehicle_type') }}
+        </fieldset>
+        <fieldset class="random_joke">
+            {{ form.random_joke.label }}
+            {{ form.random_joke(class='form-control', placeholder='random_joke') }}
+        </fieldset>
+        <fieldset class="joke-field">
+            {{ form.dad_joke.label }}
+            {{ form.dad_joke(class='form-control', placeholder='Dad Joke') }}
+        </fieldset>
+
+        {{ form.submit_button(class='btn btn-primary btn-block mt-2')}}
+    </div>
+</form>
