@@ -48,9 +48,9 @@ def signin():
                 login_user(logged_user)
                 return redirect(url_for('site.home'))
                 
-        else:
-            print('Password incorrect')
-            return redirect(url_for('auth.signin'))
+            else:
+                print('Password incorrect')
+                return redirect(url_for('auth.signin'))
         
     except:
         raise Exception('Invalid Form Data: Please Check Your Form')

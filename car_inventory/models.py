@@ -51,10 +51,9 @@ class Car(db.Model):
     price = db.Column(db.Numeric(precision=10, scale=2))
     is_new = db.Column(db.Boolean, default=False)
     vehicle_type = db.Column(db.String(15))
-    image = db.Column(db.String, nullable=True)
     user_token = db.Column(db.String, nullable=False)
 
-    def __init__(self, make, model, year, color, price, is_new, vehicle_type, image, user_token):
+    def __init__(self, make, model, year, color, price, is_new, vehicle_type, user_token):
         self.id = self.set_id()
         self.make = make
         self.model = model
@@ -63,7 +62,6 @@ class Car(db.Model):
         self.price = price
         self.is_new = is_new
         self.vehicle_type = vehicle_type
-        self.image = image
         self.user_token = user_token
 
     def set_id(self):

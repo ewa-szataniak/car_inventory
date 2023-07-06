@@ -27,6 +27,10 @@ def profile():
             price = carform.price.data
             year = carform.year.data
             is_new = carform.is_new.data
+            if is_new == 'yes':
+                is_new = True
+            else:
+                is_new = False
             vehicle_type = carform.vehicle_type.data
             if carform.dad_joke.data:
                 random_joke = carform.dad_joke.data
