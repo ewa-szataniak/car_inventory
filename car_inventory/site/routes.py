@@ -19,7 +19,8 @@ def home():
 def profile():
     carform = CarForm()
 
-    try:
+    #try:
+    if True:
         
         if request.method == 'POST' and carform.validate_on_submit():
             make = carform.make.data
@@ -38,15 +39,15 @@ def profile():
                 random_joke = random_joke_generator()
             user_token = current_user.token 
 
-            car = Car (make, model, price, year, is_new, vehicle_type, random_joke, user_token)
+            car = Car (make, model,  year, 'pink', price, True, vehicle_type,  user_token)
             
             db.session.add(car)
             db.session.commit()
 
             return redirect(url_for('site.profile'))
         
-    except:
-        raise Exception('Car not created, please check your form and try again.')
+    #except:
+        #raise Exception('Car not created, please check your form and try again.')
     
     user_token = current_user.token 
     cars = Car.query.filter_by(user_token=user_token)
